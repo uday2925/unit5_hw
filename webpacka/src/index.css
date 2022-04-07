@@ -1,0 +1,17 @@
+
+#main{
+    display:flex;
+}
+#root{
+    width:30%;
+    color:tomato;
+    
+}
+
+#display{
+    width:70%;
+    background-color: blue;
+}
+#main>div{
+    border:1px solid red;
+}
