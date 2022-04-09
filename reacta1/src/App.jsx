@@ -5,39 +5,43 @@ function App() {
   const mobile = [
     {
       heading : "Mobile Operating System",
-      items : ["Android", "Blackberry","iPhone","Windows Phone"],
-      styles1:["circle","circle","circle","circle"]
+      items :[{names:"Android",icons:"disc"},
+              {names:"Blackberry",icons:"disc"},
+              {names:"iPhone",icons:"disc"},
+              {names:"Windows Phone",icons:"disc"}
+            ]      
     },
     {
       heading : "Mobile Manufactures",
-      items : ["Samsung", "HTC","Micromax","Apple"],
-      styles1 : ["square","square","circle","ocircle"]
+      items :[{names:"Samsung",icons:"square"},
+              {names:"HTC",icons:"square"},
+              {names:"Micromax",icons:"circle"},
+              {names:"Apple",icons:"ocircle"}
+            ]      
     }
   ]
-
   
   return (
     <div className="App">      
         {mobile.map((e)=>(
-          <Skill heading={e.heading} items={e.items} />
+          <Skill heading={e.heading} items={e.items}/>
         ))}        
     </div>
   );
 }
 
-function Skill({heading,items,styles})
-{
-  console.log(items,styles)
+function Skill({heading,items})
+{  
+  // console.log({heading,items})
     return (<div>
       <h1>{heading}</h1>
       <ul>
         {items.map((e)=>{
-          return <li style={{color: "red"}}>{e}</li>
+          return <li className={e.icons}>{e.names}</li>           ///inline styles  example <li style={{color: "blue"}}>
         })}
       </ul>
 
-    </div>)
-   
+    </div>)   
     
 }
 
