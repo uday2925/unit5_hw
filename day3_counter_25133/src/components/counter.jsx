@@ -18,8 +18,7 @@ function Counter({value})
 
 
     return(
-        <div>
-             
+        <div>             
             <p className={counter%2===0?"greentxt":"redtxt"}>counter:{counter}</p>
             <button onClick={()=>{handlechange(1)}}>Increment</button>
             <button onClick={()=>{handlechange(-1)}}>decrement</button>
@@ -29,7 +28,7 @@ function Counter({value})
     
 }
 
-export default Counter
+export default Counter;
 
 
 
