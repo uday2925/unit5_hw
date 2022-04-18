@@ -5,6 +5,7 @@ const { useState } = require("react");
 function Counter({value})
 {
     
+    console.log(value)
     const [counter,setCounter]=useState(value);
     //console.log({counter});    
     function handlechange(values)
